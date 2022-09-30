@@ -1,0 +1,73 @@
+{% include 'admin/cabecera.html' %}
+
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-header">
+                    Datos del Artículo
+                </div>
+                <div class="card-body">
+                    <form action="/admin/catagologo/guardar" method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                          <label for="txtNombre" class="form-label">Nombre:</label>
+                          <input type="text" class="form-control" name="txtNombre" id="txtNombre" aria-describedby="helpId" placeholder="Nombre del artículo">
+                          <label for="txtDescripcion" class="form-label">Descripción:</label>
+                          <input type="text" class="form-control" name="txtDescripcion" id="txtDescripcion" aria-describedby="helpId" placeholder="Agregar Descripción">
+                          <label for="txtImagen" class="form-label">Imagen:</label>
+                          <input type="file" class="form-control" name="txtImagen" id="txtImagen" aria-describedby="helpId" placeholder="Seleccionar Imagén">
+                        </div>
+                        <button class="btn btn-primary" type="submit">Agregar</button>
+                    </form>
+                </div>
+                <div class="card-footer text-muted">
+                    
+                   
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="table-responsive">
+                <table class="table table-dark table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
+                        {% for i in catalogo %}
+                        <tr class="">
+                            
+                            <td>{{ i[0] }}</td>
+                            <td>{{ i[1] }}</td>
+                            <td>{{ i[2] }}</td>
+                            <td>
+                                <img width="60px" src="/img/{{ i[3] }}" alt="">
+                            </td>                            
+                            <td>
+                                <form action="/admin/catalogo/borrar" method="post">
+                                <input value="{{ i[0] }}" type="hidden" name="txtID" id="txtID"> 
+                                    <button class="btn btn-danger" type="submit">Eliminar</button>
+                                </form>
+                            </td>
+                            
+                        </tr>
+                       {%endfor%}
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </div>
+           
+        </div>
+    </div>
+</div>
+
+{% include 'admin/pie.html' %} 

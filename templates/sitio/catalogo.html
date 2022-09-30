@@ -1,0 +1,20 @@
+{% include 'sitio/cabecera.html' %}
+
+<div class="row">
+    {% for i in catalogo %}
+    <div class="col-md-3">
+        <div class="card">
+            <img class="card-img-top" src="/img/{{ i[3] }}" alt="{{ i[1] }}"style="height:300px;">
+            <div class="card-body">
+                <h4 class="card-title">{{i[1]}}</h4>
+                <p class="card-text">
+                    <a href="/" class="btn btn-primary btnlg" role="button">Comprar</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    {%endfor%}
+
+</div>
+
+{% include 'sitio/pie.html' %}

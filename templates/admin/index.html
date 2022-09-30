@@ -1,0 +1,17 @@
+{% include 'admin/cabecera.html' %}
+
+    <br>
+    <div class="p-5 bg-light">
+        <div class="container">
+           <h1 class="display-3">Bienvenid@ <strong>{{ session["usuario"]}}</strong> a K-SHOP</h1>
+           <p class="lead"><marquee behavior="alternate" direction="">Aquí podrá administrar los artículos del sitio web.</marquee></p>
+           <hr class="my-2">
+           <p class="lead">
+            <a href="/admin/catalogo" class="btn btn-primary btn-lg" role="button">Empezar</a>
+           </p>
+        </div>
+        
+    </div>
+
+
+ {% include 'admin/pie.html' %} 
