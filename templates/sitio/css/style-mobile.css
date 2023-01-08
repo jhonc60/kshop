@@ -1,0 +1,12 @@
+@media screen and (max-width: 768px) {
+  .card {
+    width: 90%;
+  }
+  .card-img-top {
+    width: 100%;
+    height: auto;
+  }
+  .card-title {
+    font-size: 18px;
+  }
+}

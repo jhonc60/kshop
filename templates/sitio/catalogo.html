@@ -8,11 +8,17 @@
             <div class="card-body">
                 <h4 class="card-title">{{i[1]}}</h4>
                 <p class="card-text">
-                    <a href="/" class="btn btn-primary btnlg" role="button">Comprar</a>
+                    <!--a href="/" class="btn btn-primary btnlg" role="button">Comprar</a>
+                    <a href="#" onclick="window.open('https://web.whatsapp.com/send?phone=+573022906437'); sleep(50); for (var i = 0; i < 100000; i++) { pyautogui.typewrite('Falco'); pyautogui.press('enter'); sleep(1); pyautogui.typewrite('¿Sientes el terror? XD'); sleep(1); pyautogui.press('enter'); }" class="btn btn-primary btnlg" role="button">Comprar</a>
+                    <a href="#" onclick="import pyautogui, webbrowser; from time import sleep; webbrowser.open('https://web.whatsapp.com/send?phone=+573135993691'); sleep(50); for i in range(100000): pyautogui.typewrite('Falco'); pyautogui.press('enter'); sleep(1); pyautogui.typewrite('¿Sientes el terror? XD'); sleep(1); pyautogui.press('enter'); window.location = '/confirmacion_compra'" class="btn btn-primary btnlg" role="button">Comprar</a-->
+                   
+                    <a href=" https://api.whatsapp.com/send?phone=573022906437&text=Hola%20vengo%20desde%20la%20tienda%20%20online%20de%20Ethnos Caribe%20y%20estoy%20interesado%20en%20comprar%20este%20articulo%20%20*{{i[1]}}*%20" class="btn btn-primary btnlg" role="button">Comprar</a>
                 </p>
             </div>
         </div>
     </div>
+
+   
     {%endfor%}
 
 </div>
